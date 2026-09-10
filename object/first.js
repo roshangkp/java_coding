@@ -74,16 +74,4 @@ let {age:newAge,name="roshan" ,  x = 18}=obj3;
 
 //console.log({}=={})
 
-
-
-
-
-
-
-
-
-
-
-
-
 // access ->> dot vs [] || mutable or immutable
