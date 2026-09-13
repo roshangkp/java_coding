@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>QRcodes</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="container">
+
+
+        
+
+        <div class="left-section">
+
+            <h1>QRcodes</h1>
+
+            <p>Generate QRCode for anything!</p>
+
+
+            <input
+                type="text"
+                id="qrInput"
+                placeholder="Type something..."
+            >
+
+
+            <button id="generateBtn">
+                Generate
+            </button>
+
+        </div>
+
+
+
+        
+
+        <div class="right-section">
+
+            <div class="qr-card">
+
+
+                <div class="qr-box">
+
+                    <div id="qrcode"></div>
+
+                </div>
+
+
+                <button id="downloadBtn">
+                    Download
+                </button>
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js">
+    </script>
+
+
+
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

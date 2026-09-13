@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    background: #5b9bd5;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 20px;
+}
+
+
+.container {
+
+    width: 100%;
+
+    max-width: 900px;
+}
+
+
+.card {
+
+    background: white;
+
+    border: 5px solid #6da8df;
+
+    border-radius: 12px;
+
+    padding: 55px 45px 70px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+
+    text-align: left;
+}
+
+
+/* =========================
+   HEADING
+========================= */
+
+h1 {
+
+    font-size: 46px;
+
+    font-weight: 500;
+
+    color: #111;
+
+    margin-bottom: 20px;
+}
+
+
+p {
+
+    font-size: 27px;
+
+    color: #555;
+
+    margin-bottom: 50px;
+}
+
+
+/* =========================
+   INPUT
+========================= */
+
+#textInput {
+
+    width: 100%;
+
+    height: 105px;
+
+    padding: 0 35px;
+
+    font-size: 27px;
+
+    color: #333;
+
+    background: white;
+
+    border: 3px solid #d0d0d0;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    margin-bottom: 40px;
+}
+
+
+#textInput::placeholder {
+
+    color: #999;
+}
+
+
+#textInput:focus {
+
+    border-color: #5b9bd5;
+}
+
+
+/* =========================
+   GENERATE BUTTON
+========================= */
+
+#generateBtn {
+
+    width: 100%;
+
+    height: 105px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #5b9bd5;
+
+    color: white;
+
+    font-size: 28px;
+
+    font-weight: 500;
+
+    cursor: pointer;
+
+    margin-bottom: 55px;
+
+    transition: 0.3s;
+}
+
+
+#generateBtn:hover {
+
+    background: #478dcc;
+}
+
+
+#generateBtn:active {
+
+    transform: scale(0.99);
+}
+
+
+/* =========================
+   QR CONTAINER
+========================= */
+
+.qr-container {
+
+    width: 100%;
+
+    min-height: 470px;
+
+    border: 3px solid #e0e0e0;
+
+    border-radius: 10px;
+
+    background: white;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+/* =========================
+   QR CODE
+========================= */
+
+#qrcode {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+#qrcode img {
+
+    width: 300px;
+
+    height: 300px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 700px) {
+
+    .card {
+
+        padding: 35px 25px 45px;
+    }
+
+
+    h1 {
+
+        font-size: 36px;
+    }
+
+
+    p {
+
+        font-size: 20px;
+
+        margin-bottom: 35px;
+    }
+
+
+    #textInput {
+
+        height: 75px;
+
+        padding: 0 20px;
+
+        font-size: 20px;
+
+        margin-bottom: 25px;
+    }
+
+
+    #generateBtn {
+
+        height: 75px;
+
+        font-size: 21px;
+
+        margin-bottom: 35px;
+    }
+
+
+    .qr-container {
+
+        min-height: 350px;
+    }
+
+
+    #qrcode img {
+
+        width: 240px;
+
+        height: 240px;
+    }
+
+}

@@ -1,0 +1,525 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    background: #304037;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 30px;
+}
+
+
+/* =========================
+   MAIN CARD
+========================= */
+
+.container {
+
+    width: 100%;
+
+    max-width: 650px;
+}
+
+
+.card {
+
+    background: #f1f6f5;
+
+    padding: 45px 50px 38px;
+
+    border-radius: 18px;
+
+    text-align: center;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.25);
+
+    transition: transform 0.3s ease;
+}
+
+
+.card:hover {
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   HEADING
+========================= */
+
+h1 {
+
+    font-size: 38px;
+
+    color: #26352c;
+
+    margin-bottom: 22px;
+
+    font-weight: 700;
+}
+
+
+p {
+
+    font-size: 20px;
+
+    font-weight: 600;
+
+    color: #3e4741;
+
+    margin-bottom: 42px;
+}
+
+
+/* =========================
+   INPUT
+========================= */
+
+#textInput {
+
+    width: 100%;
+
+    height: 65px;
+
+    padding: 0 18px;
+
+    border: 2px solid #333;
+
+    border-radius: 9px;
+
+    background: #eef0ff;
+
+    color: #222;
+
+    font-size: 20px;
+
+    outline: none;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+#textInput:focus {
+
+    border-color: #304037;
+
+    box-shadow:
+        0 0 0 4px rgba(48, 64, 55, 0.15);
+
+    transform: scale(1.01);
+}
+
+
+#textInput::placeholder {
+
+    color: #555;
+}
+
+
+/* =========================
+   BUTTON GROUP
+========================= */
+
+.button-group {
+
+    display: flex;
+
+    gap: 14px;
+
+    margin-top: 25px;
+}
+
+
+.button-group button {
+
+    flex: 1;
+
+    height: 65px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        background 0.35s ease;
+}
+
+
+/* =========================
+   GENERATE BUTTON
+========================= */
+
+#generateBtn {
+
+    background: #304037;
+
+    color: white;
+}
+
+
+#generateBtn:hover {
+
+    background: #43584b;
+
+    transform: translateY(-7px) scale(1.04);
+
+    box-shadow:
+        0 12px 25px rgba(48, 64, 55, 0.40);
+}
+
+
+/* =========================
+   CLEAR BUTTON
+========================= */
+
+#clearBtn {
+
+    background: #c94b46;
+
+    color: white;
+}
+
+
+#clearBtn:hover {
+
+    background: #e0524d;
+
+    transform: translateY(-7px) scale(1.04);
+
+    box-shadow:
+        0 12px 25px rgba(201, 75, 70, 0.40);
+}
+
+
+/* =========================
+   BUTTON SHINE
+========================= */
+
+.button-group button::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: -120%;
+
+    width: 70%;
+
+    height: 100%;
+
+    background: rgba(255, 255, 255, 0.30);
+
+    transform: skewX(-25deg);
+
+    transition: left 0.6s ease;
+}
+
+
+.button-group button:hover::before {
+
+    left: 130%;
+}
+
+
+/* =========================
+   BUTTON CLICK
+========================= */
+
+.button-group button:active {
+
+    transform: translateY(-2px) scale(0.96);
+
+    box-shadow:
+        0 4px 8px rgba(0, 0, 0, 0.20);
+}
+
+
+/* =========================
+   MESSAGE
+========================= */
+
+#message {
+
+    min-height: 28px;
+
+    margin-top: 17px;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    color: #333;
+}
+
+
+.success {
+
+    color: #3f8f3f !important;
+}
+
+
+.error {
+
+    color: #c94b46 !important;
+}
+
+
+/* =========================
+   QR CONTAINER
+========================= */
+
+#qrContainer {
+
+    width: 265px;
+
+    height: 265px;
+
+    margin: 10px auto 20px;
+
+    background: white;
+
+    border: 2px solid #d2d2d2;
+
+    border-radius: 8px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    box-shadow:
+        0 3px 8px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+#qrContainer:hover {
+
+    transform: scale(1.02);
+
+    box-shadow:
+        0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+
+#qrcode {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+#qrcode img {
+
+    width: 240px;
+
+    height: 240px;
+
+    display: block;
+}
+
+
+/* =========================
+   DOWNLOAD BUTTON
+========================= */
+
+#downloadBtn {
+
+    width: 100%;
+
+    height: 65px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #55a653;
+
+    color: white;
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        background 0.35s ease;
+}
+
+
+#downloadBtn:hover {
+
+    background: #69bd66;
+
+    transform: translateY(-7px) scale(1.04);
+
+    box-shadow:
+        0 12px 25px rgba(85, 166, 83, 0.40);
+}
+
+
+/* DOWNLOAD SHINE */
+
+#downloadBtn::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: -120%;
+
+    width: 70%;
+
+    height: 100%;
+
+    background: rgba(255, 255, 255, 0.30);
+
+    transform: skewX(-25deg);
+
+    transition: left 0.6s ease;
+}
+
+
+#downloadBtn:hover::before {
+
+    left: 130%;
+}
+
+
+/* DOWNLOAD CLICK */
+
+#downloadBtn:active {
+
+    transform: translateY(-2px) scale(0.96);
+
+    box-shadow:
+        0 4px 8px rgba(0, 0, 0, 0.20);
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 600px) {
+
+    body {
+
+        padding: 15px;
+    }
+
+
+    .card {
+
+        padding: 35px 22px 30px;
+    }
+
+
+    h1 {
+
+        font-size: 30px;
+    }
+
+
+    p {
+
+        font-size: 17px;
+
+        margin-bottom: 30px;
+    }
+
+
+    #textInput {
+
+        height: 58px;
+
+        font-size: 17px;
+    }
+
+
+    .button-group {
+
+        flex-direction: column;
+    }
+
+
+    .button-group button {
+
+        height: 58px;
+
+        font-size: 18px;
+    }
+
+
+    #qrContainer {
+
+        width: 245px;
+
+        height: 245px;
+    }
+
+
+    #qrcode img {
+
+        width: 220px;
+
+        height: 220px;
+    }
+
+
+    #downloadBtn {
+
+        height: 58px;
+
+        font-size: 18px;
+    }
+
+}

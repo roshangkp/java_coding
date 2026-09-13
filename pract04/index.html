@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Number Guessing Game</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <div class="background">
+
+        <div class="orb orb-one"></div>
+        <div class="orb orb-two"></div>
+
+
+        <main class="game-card">
+
+
+            <!-- HEADER -->
+
+            <div class="game-header">
+
+                <div class="game-icon">
+                    🎯
+                </div>
+
+                <div>
+
+                    <h1>Number Guessing Game</h1>
+
+                    <p>
+                        Guess a number between <strong>1 - 15</strong>
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- STATUS -->
+
+            <div class="status-bar">
+
+                <div class="status-item">
+
+                    <span class="status-label">
+                        Attempts
+                    </span>
+
+                    <span id="guessCount">
+                        0
+                    </span>
+
+                </div>
+
+
+                <div class="divider"></div>
+
+
+                <div class="status-item">
+
+                    <span class="status-label">
+                        Range
+                    </span>
+
+                    <span>
+                        1 - 15
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- INPUT AREA -->
+
+            <div class="input-section">
+
+                <label for="guessInput">
+                    Enter your guess
+                </label>
+
+
+                <div class="input-wrapper">
+
+                    <input
+                        type="number"
+                        id="guessInput"
+                        min="1"
+                        max="15"
+                        placeholder="?"
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+                <button id="guessBtn">
+
+                    <span class="button-icon">
+                        🎯
+                    </span>
+
+                    Make a Guess
+
+                </button>
+
+            </div>
+
+
+            <!-- MESSAGE -->
+
+            <div id="message" class="message">
+
+                <span class="message-icon">
+                    💡
+                </span>
+
+                <span id="messageText">
+                    Make your first guess!
+                </span>
+
+            </div>
+
+
+            <!-- GUESS HISTORY -->
+
+            <div class="history-section">
+
+                <div class="section-title">
+
+                    <span>
+                        Guess History
+                    </span>
+
+                    <span id="guessCounter">
+                        0 guesses
+                    </span>
+
+                </div>
+
+
+                <div
+                    id="guessedNumbers"
+                    class="guess-history"
+                >
+
+                    <span class="empty-history">
+                        Your guesses will appear here
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROGRESS -->
+
+            <div class="progress-section">
+
+                <div class="progress-info">
+
+                    <span>
+                        Game Progress
+                    </span>
+
+                    <span id="progressText">
+                        0%
+                    </span>
+
+                </div>
+
+
+                <div class="progress-bar">
+
+                    <div
+                        id="progress"
+                        class="progress"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+            <!-- RESET -->
+
+            <button id="resetBtn">
+
+                <span>
+                    ↻
+                </span>
+
+                New Game
+
+            </button>
+
+
+            <!-- FOOTER -->
+
+            <div class="game-footer">
+
+                <span>
+                    🧠 Think carefully
+                </span>
+
+                <span>
+                    •
+                </span>
+
+                <span>
+                    🎲 Good luck!
+                </span>
+
+            </div>
+
+
+        </main>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
