@@ -13,9 +13,9 @@ function fun(name) {
 }
 
 for (var i = 0; i < 4; i++) {
-    console.log("I am insides set time out>>>",i);
+    console.log("I am insides set time out>>>>>>",i);
     setTimeout(() => {
-        console.log("\nI am insides loop time out",i);
+        console.log("\nI am insides loop time out<<<<<<<<<<",i);
      }, 2000); //last
 
 }
